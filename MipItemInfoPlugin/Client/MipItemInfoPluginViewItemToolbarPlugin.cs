@@ -5,6 +5,7 @@ using System.Windows;
 using VideoOS.Platform;
 using VideoOS.Platform.Client;
 using VideoOS.Platform.ConfigurationItems;
+using VideoOS.Platform.UI.Controls;
 
 namespace MipItemInfoPlugin.Client
 {
@@ -18,7 +19,7 @@ namespace MipItemInfoPlugin.Client
 
             Title = "Camera Info";
             Tooltip = "Show camera info";
-            Icon = Properties.Resources.CameraInfo;
+            IconSource = MipItemInfoPluginViewItemToolbarPlugin.IconSource;
         }
 
         public override void Activate()
@@ -51,7 +52,22 @@ namespace MipItemInfoPlugin.Client
 
         public override string Name => "Camera Info Plugin";
 
-        
+        private static VideoOSIconSourceBase _iconSource;
+        public static VideoOSIconSourceBase IconSource
+        {
+            get
+            {
+                if (_iconSource == null)
+                {
+                    _iconSource = new VideoOSIconBitmapSource
+                    {
+                        BitmapSource = Properties.Resources.CameraInfo.ToBitmapSource()
+                    };
+                }
+                return _iconSource;
+            }
+        }
+
 
         public override ToolbarPluginOverflowMode ToolbarPluginOverflowMode => ToolbarPluginOverflowMode.AsNeeded;
 

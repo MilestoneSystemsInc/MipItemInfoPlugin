@@ -1,7 +1,6 @@
 using MipItemInfoPlugin.Client;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Drawing;
 using VideoOS.Platform;
 using VideoOS.Platform.Admin;
@@ -94,7 +93,7 @@ namespace MipItemInfoPlugin
 
         public override string Manufacturer => "Milestone Systems";
 
-        public override string VersionString => "1.0.0.0";
+        public override string VersionString => ThisAssembly.AssemblyVersion;
 
         public override Image Icon => TopTreeNodeImage;
 
