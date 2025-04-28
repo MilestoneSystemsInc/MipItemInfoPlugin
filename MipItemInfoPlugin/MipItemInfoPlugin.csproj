@@ -56,72 +56,13 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="VideoOS.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc60fba4a7969f89, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Milestone\MIPSDK\Bin\VideoOS.Platform.dll</HintPath>
+    <Reference Include="VideoOS.Platform">
+      <HintPath>..\..\..\..\..\..\Program Files\Milestone\MIPSDK\Bin\VideoOS.Platform.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\MipItemInfoPluginAddUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\MipItemInfoPluginAddUserControl.Designer.cs">
-      <DependentUpon>MipItemInfoPluginAddUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\MipItemInfoPluginHelpPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\MipItemInfoPluginHelpPage.Designer.cs">
-      <DependentUpon>MipItemInfoPluginHelpPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\MipItemInfoPluginItemManager.cs" />
-    <Compile Include="Admin\MipItemInfoPluginTabPlugin.cs" />
-    <Compile Include="Admin\MipItemInfoPluginTabUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\MipItemInfoPluginTabUserControl.Designer.cs">
-      <DependentUpon>MipItemInfoPluginTabUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\MipItemInfoPluginToolsOptionDialogPlugin.cs" />
-    <Compile Include="Admin\MipItemInfoPluginToolsOptionDialogUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\MipItemInfoPluginToolsOptionDialogUserControl.designer.cs">
-      <DependentUpon>MipItemInfoPluginToolsOptionDialogUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\MipItemInfoPluginUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\MipItemInfoPluginUserControl.Designer.cs">
-      <DependentUpon>MipItemInfoPluginUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Background\MipItemInfoPluginBackgroundPlugin.cs" />
-    <Compile Include="Client\MipItemInfoPluginPropertiesWpfUserControl.xaml.cs">
-      <DependentUpon>MipItemInfoPluginPropertiesWpfUserControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Client\MipItemInfoPluginSettingsPanelPlugin.cs" />
-    <Compile Include="Client\MipItemInfoPluginSettingsPanelControl.xaml.cs">
-      <DependentUpon>MipItemInfoPluginSettingsPanelControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Client\MipItemInfoPluginSidePanelPlugin.cs" />
-    <Compile Include="Client\MipItemInfoPluginSidePanelWpfUserControl.xaml.cs">
-      <DependentUpon>MipItemInfoPluginSidePanelWpfUserControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Client\MipItemInfoPluginViewItemPlugin.cs" />
-    <Compile Include="Client\MipItemInfoPluginViewItemManager.cs" />
     <Compile Include="Client\MipItemInfoPluginViewItemToolbarPlugin.cs" />
-    <Compile Include="Client\MipItemInfoPluginViewItemWpfUserControl.xaml.cs">
-      <DependentUpon>MipItemInfoPluginViewItemWpfUserControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Client\MipItemInfoPluginViewLayout.cs" />
-    <Compile Include="Client\MipItemInfoPluginWorkSpacePlugin.cs" />
-    <Compile Include="Client\MipItemInfoPluginWorkSpaceToolbarPlugin.cs" />
-    <Compile Include="Client\MipItemInfoPluginWorkSpaceViewItemManager.cs" />
-    <Compile Include="Client\MipItemInfoPluginWorkSpaceViewItemPlugin.cs" />
-    <Compile Include="Client\MipItemInfoPluginWorkSpaceViewItemWpfUserControl.xaml.cs">
-      <DependentUpon>MipItemInfoPluginWorkSpaceViewItemWpfUserControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -131,26 +72,9 @@
     <Compile Include="MipItemInfoPluginDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Admin\MipItemInfoPluginAddUserControl.resx">
-      <DependentUpon>MipItemInfoPluginAddUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Admin\MipItemInfoPluginTabUserControl.resx">
-      <DependentUpon>MipItemInfoPluginTabUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\MipItemInfoPluginToolsOptionDialogUserControl.resx">
-      <DependentUpon>MipItemInfoPluginToolsOptionDialogUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Server.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Admin\MipItemInfoPluginHelpPage.resx">
-      <DependentUpon>MipItemInfoPluginHelpPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\MipItemInfoPluginUserControl.resx">
-      <DependentUpon>MipItemInfoPluginUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -160,30 +84,9 @@
     <Content Include="plugin.def">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\info.bmp" />
     <EmbeddedResource Include="Resources\DummyItem.bmp" />
     <EmbeddedResource Include="Resources\WorkSpaceIcon.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Client\MipItemInfoPluginPropertiesWpfUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Client\MipItemInfoPluginSettingsPanelControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Client\MipItemInfoPluginSidePanelWpfUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Client\MipItemInfoPluginViewItemWpfUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Client\MipItemInfoPluginWorkSpaceViewItemWpfUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
