@@ -93,7 +93,7 @@ namespace MipItemInfoPlugin
 
         public override string Manufacturer => "Milestone Systems";
 
-        public override string VersionString => ThisAssembly.AssemblyVersion;
+        public override string VersionString => ThisAssembly.AssemblyFileVersion;
 
         public override Image Icon => TopTreeNodeImage;
 
