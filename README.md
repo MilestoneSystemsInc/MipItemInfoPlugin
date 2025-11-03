@@ -1,8 +1,8 @@
 # MipItemInfoPlugin
 
-[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/MilestoneSystemsInc/MipItemInfoPlugin/ci.yml?label=build)](actions/)
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/MilestoneSystemsInc/MipItemInfoPlugin/ci.yml?label=build)](https://github.com/MilestoneSystemsInc/MipItemInfoPlugin/actions)
 [![GitHub Release](https://img.shields.io/github/v/release/MilestoneSystemsInc/MipItemInfoPlugin
-)](releases/)
+)](https://github.com/MilestoneSystemsInc/MipItemInfoPlugin/releases)
 ![GitHub License](https://img.shields.io/github/license/MilestoneSystemsInc/MipItemInfoPlugin?cacheSeconds=3600)
 
 ![Screenshot of Camera Info dialog in XProtect Smart Client](image.png)
