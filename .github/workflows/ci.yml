@@ -1,0 +1,42 @@
+name: CI
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+    tags:
+      - 'v*.*.*'
+  pull_request:
+    branches:
+      - 'main'
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+    steps:      
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build
+        id: build
+        shell: powershell
+        run: |
+          $result = .\build.ps1
+          $result | Format-Table
+          "INSTALLERNAME=MipItemInfoPlugin.$($result.Version)" | Add-Content $env:GITHUB_OUTPUT
+          "OUTPUTDIRECTORY=.\output\Setup\en-US\" | Add-Content $env:GITHUB_OUTPUT
+
+      - name: Upload as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.build.outputs.INSTALLERNAME }}
+          path: ${{ steps.build.outputs.OUTPUTDIRECTORY }}

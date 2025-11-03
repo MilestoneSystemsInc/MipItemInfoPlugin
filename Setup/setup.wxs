@@ -1,0 +1,31 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+    xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+
+    <Package Name="MIP Item Info Plugin" Manufacturer="Milestone Systems"
+        Version="$(Version)"
+        UpgradeCode="7265EC2C-4F09-47DA-BFD6-225D6EBFD865">
+        <MajorUpgrade AllowDowngrades="yes" />
+        <MediaTemplate EmbedCab="yes" />
+
+        <Icon Id="MipItemInfoIcon" SourceFile="..\MipItemInfoPlugin\Resources\icon.ico" />
+        <Property Id="ARPPRODUCTICON" Value="MipItemInfoIcon" />
+
+        <StandardDirectory Id="ProgramFiles64Folder">
+            <Directory Name="VideoOS">
+                <Directory Name="MIPPlugins">
+                    <Directory Name="MipItemInfoPlugin" Id="INSTALLFOLDER" />
+                </Directory>
+            </Directory>
+        </StandardDirectory>
+
+        <Feature Id="Main">
+            <ComponentGroupRef Id="MipItemInfoPluginAssemblies" />
+        </Feature>
+
+        <ui:WixUI Id="WixUI_Minimal" InstallDirectory="INSTALLFOLDER" />
+        <WixVariable
+            Id="WixUILicenseRtf"
+            Value="license.rtf"
+        />
+    </Package>
+</Wix>

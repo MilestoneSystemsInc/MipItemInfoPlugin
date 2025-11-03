@@ -1,0 +1,31 @@
+<Project Sdk="WixToolset.Sdk/5.0.1">
+    <PropertyGroup>
+        <BuildVersion>0.1.1</BuildVersion>
+        <DefineConstants>Version=$(BuildVersion)</DefineConstants>
+        <OutputPath>..\output\Setup</OutputPath>
+        <OutputName>MipItemInfoPlugin.$(BuildVersion)</OutputName>
+        <SuppressIces>ICE61</SuppressIces>
+        <HarvestPath>..\output\MipItemInfoPlugin</HarvestPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="WixToolset.Heat" Version="5.0.1" />
+        <PackageReference Include="WixToolset.UI.wixext" Version="5.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../MipItemInfoPlugin/MipItemInfoPlugin.csproj" />
+        <HarvestDirectory Include="$(HarvestPath)">
+            <ComponentGroupName>MipItemInfoPluginAssemblies</ComponentGroupName>
+            <DirectoryRefId>INSTALLFOLDER</DirectoryRefId>
+            <SuppressRootDirectory>true</SuppressRootDirectory>
+            <SuppressRegistry>true</SuppressRegistry>
+            <Transforms>filter.xsl</Transforms>
+        </HarvestDirectory>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <PreBuildEvent>
+        </PreBuildEvent>
+    </PropertyGroup>
+</Project>
