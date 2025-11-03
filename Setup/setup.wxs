@@ -1,7 +1,7 @@
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
     xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
 
-    <Package Name="MIP Item Info Plugin" Manufacturer="Milestone Systems"
+    <Package Name="MIP Item Info Plugin" Manufacturer="Milestone Systems A/S"
         Version="$(Version)"
         UpgradeCode="7265EC2C-4F09-47DA-BFD6-225D6EBFD865">
         <MajorUpgrade AllowDowngrades="yes" />

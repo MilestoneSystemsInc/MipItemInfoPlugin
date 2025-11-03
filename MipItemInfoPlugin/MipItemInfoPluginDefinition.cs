@@ -105,7 +105,7 @@ namespace MipItemInfoPlugin
 
         public override string Name => "Camera Info Plugin";
 
-        public override string Manufacturer => "Milestone Systems";
+        public override string Manufacturer => "Milestone Systems A/S";
 
         public override string VersionString => ThisAssembly.AssemblyFileVersion;
 
