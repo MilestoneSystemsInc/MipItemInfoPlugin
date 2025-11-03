@@ -112,6 +112,9 @@
   -->
   <PropertyGroup>
     <PostBuildEvent>
+      del /s /q VideoOS*
+      for /R /D %%1 in (*) do rd "%%1"
+      dotnet tool run sbom-tool generate -b . -bc .\ -pn MipItemInfoPlugin -pv $(BuildVersion) -ps "Milestone Systems A/S" -nsb https://milestone.dk/MipItemInfoPlugin -V Warning
     </PostBuildEvent>
   </PropertyGroup>
 </Project>
