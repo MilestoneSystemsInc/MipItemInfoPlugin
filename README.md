@@ -1,5 +1,10 @@
 # MipItemInfoPlugin
 
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/MilestoneSystemsInc/MipItemInfoPlugin/ci.yml?label=build)](actions/)
+[![GitHub Release](https://img.shields.io/github/v/release/MilestoneSystemsInc/MipItemInfoPlugin
+)](releases/)
+![GitHub License](https://img.shields.io/github/license/MilestoneSystemsInc/MipItemInfoPlugin?cacheSeconds=3600)
+
 ![Screenshot of Camera Info dialog in XProtect Smart Client](image.png)
 
 MipItemInfoPlugin is a simple Milestone Integration Platform (MIP) plugin for the XProtect Smart Client. It adds a toolbar button that helps operators and administrators quickly identify where a camera lives in the XProtect configuration hierarchy (Management Server > Recording Server > Hardware). This is especially useful in large deployments with thousands of cameras and many servers where locating a camera's exact configuration location is time-consuming.
